@@ -1,12 +1,13 @@
+import Navbar from "@/components/Navbar";
 
-const PrimaryLayout = ({children}) => {
-    return (
-        <div>
-            <nav> this is nav</nav>
-            {children}
-            <footer> this is footer</footer>
-        </div>
-    );
+const PrimaryLayout = ({ children }) => {
+  return (
+    <div>
+      <Navbar />
+      {children}
+      <footer> this is footer</footer>
+    </div>
+  );
 };
 
 export default PrimaryLayout;
