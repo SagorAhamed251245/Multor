@@ -1,8 +1,9 @@
+import SideBar from "@/components/SideBar";
 
 const DashboardLayout = ({children}) => {
     return (
         <div>
-            <h1>Side bar</h1>
+            <SideBar></SideBar>
             {children}
         </div>
     );

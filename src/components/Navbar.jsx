@@ -24,12 +24,12 @@ const navLink = [
 ];
 const Navbar = () => {
   return (
-    <nav className="flex justify-between px-24 bg-sky-400 py-3">
+    <nav className="flex justify-between  items-center px-24 bg-sky-400 py-3">
       <h1 className="text-3xl font-bold">Next Hero</h1>
       <ul className="flex gap-3">
         {navLink.map(({ path, title }) => (
-          <li  key={path}>
-            <Link className="font-bold hover:text-white delay-200 " href={path}>{title}</Link>
+          <li className="font-bold hover:text-white delay-200 " key={path}>
+            <Link  href={path}>{title}</Link>
           </li>
         ))}
       </ul>
