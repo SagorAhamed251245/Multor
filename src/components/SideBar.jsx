@@ -19,11 +19,11 @@ const navLink = [
 ];
 const SideBar = () => {
   return (
-    <aside className="flex justify-between  items-center px-24 bg-sky-400 py-3">
-      <h1 className="text-3xl font-bold">Next Hero</h1>
-      <ul className="flex gap-3">
+    <aside className="mr-10 ">
+      <h1 className="text-3xl font-bold">Dashboard</h1>
+      <ul className="">
         {navLink.map(({ path, title }) => (
-          <li className="font-bold hover:text-white delay-200 " key={path}>
+          <li className="font-bold hover:text-white delay-200 my-3" key={path}>
             <Link href={path}>{title}</Link>
           </li>
         ))}
