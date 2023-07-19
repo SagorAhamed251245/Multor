@@ -1,4 +1,3 @@
-import Link from "next/link";
 import NavLink from "./NavLink";
 
 const navLink = [
@@ -30,7 +29,7 @@ const Navbar = () => {
       <ul className="flex gap-3">
         {navLink.map(({ path, title }) => (
           <li  className="font-bold hover:text-white delay-200 " key={path}>
-            <NavLink  exact ={ path === '/'} activeClassName='text-white' href={path}>{title}</NavLink>
+            <NavLink  exact ={ path === '/'} activeClassName='text-white ' href={path}>{title}</NavLink>
           </li>
         ))}
       </ul>

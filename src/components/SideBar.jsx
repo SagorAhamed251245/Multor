@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "./NavLink";
 const navLink = [
   {
     path: "/dashboard",
@@ -24,7 +25,7 @@ const SideBar = () => {
       <ul className="">
         {navLink.map(({ path, title }) => (
           <li className="font-bold hover:text-white delay-200 my-3" key={path}>
-            <Link href={path}>{title}</Link>
+            <NavLink  exact activeClassName='text-blue-500 ' href={path}>{title}</NavLink>
           </li>
         ))}
       </ul>
