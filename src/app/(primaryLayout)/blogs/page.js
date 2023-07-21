@@ -28,7 +28,7 @@ const BlogsPage = () => {
                 title: title,
                 year: year
             }
-        }} key={id}>{title}</Link>
+        }} key={id} >{title}</Link>
       ))}
     </div>
   );
