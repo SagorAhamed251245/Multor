@@ -2,7 +2,11 @@
 
 Example Input: [2, -5, 10, -3, 7] Example Output: 19 */
 
-const positiveNumbers = (arr) => {
+
+
+
+
+ const positiveNumbers = (arr) => {
   let result = 0;
   for (const i of arr) {
     if (i >= 0) {
@@ -14,3 +18,5 @@ const positiveNumbers = (arr) => {
 };
 
 console.log(positiveNumbers([1, 3, 5, -4, -6, 8, 22]));
+
+
