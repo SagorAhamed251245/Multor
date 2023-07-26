@@ -14,28 +14,18 @@ const maxUsedNumber = (array) => {
 
     arrayOfObject.push(objArray);
   }
-  /*   console.log(
-    "🚀 ~ file: task3.js:7 ~ maxUsedNumber ~ arrayOfObject:",
-    arrayOfObject
-  ); */
-  const highestNumber = arrayOfObject.map((element) => element.lengths);
 
-  /*  console.log(
-    "🚀 ~ file: task3.js:19 ~ maxUsedNumber ~ highestNumber:",
-    highestNumber
-  ); */
+  const highestNumber = arrayOfObject.map((element) => element.lengths);
 
   const maxUsedValue = Math.max(...highestNumber);
 
-  // console.log(maxUsedValue);
-
-  const filterArray = arrayOfObject.filter(
+  const filterArray = arrayOfObject.find(
     (element) => element.lengths === maxUsedValue
   );
 
-  return filterArray[0].mainNumber;
+  return filterArray.mainNumber;
 };
 
-const array = [3, 5, 13, 13, 3, 3, 13];
+const array = [3, 5, 13, 13, 3, 3, 23, 23, 23, 23, 23];
 const output = maxUsedNumber(array);
 console.log(output);

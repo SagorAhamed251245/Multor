@@ -13,6 +13,14 @@ rev("string");
 
 console.log(result.join("")); */
 
+/* const rev = (str) => {
+  let reverseStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverseStr += str[i];
+  }
+  return reverseStr;
+}; */
+
 
 
 const rev = (str) => {
@@ -20,8 +28,8 @@ const rev = (str) => {
   for (let i = str.length - 1; i >= 0; i--) {
     reverseStr += str[i];
   }
-  return reverseStr
+  return reverseStr;
 };
-rev("string");
 
-console.log(rev("string"));
+console.log(rev("name"));
+
