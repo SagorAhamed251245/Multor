@@ -4,9 +4,9 @@ function calc(a, b, operator) {
   if (
     typeof a !== "number" ||
     typeof b !== "number" ||
-    operator !== "+" ||
-    operator !== "-" ||
-    operator !== "*" ||
+    operator !== "+" &&
+    operator !== "-" &&
+    operator !== "*" &&
     operator !== "/"
   ) {
     return "invalid";
@@ -21,4 +21,4 @@ function calc(a, b, operator) {
     return a / b;
   }
 }
-console.log(calc(5, 5, "+"));
+console.log(calc(5, 5, "y"));
