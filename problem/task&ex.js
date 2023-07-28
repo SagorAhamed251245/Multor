@@ -7,9 +7,9 @@ function romanToInteger(roman) {
     C: 100,
     D: 500,
     M: 1000,
-  };
+  }
 
-  
+
   let result = 0;
   for (let i = 0; i < roman.length; i++) {
     const currentNumeralValue = romanNumerals[roman[i]];
