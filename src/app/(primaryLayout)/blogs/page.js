@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const blogs = [
+/* const blogs = [
   {
     id: 1,
     year: 2016,
@@ -16,19 +16,24 @@ const blogs = [
     year: 2015,
     title: "Blogs 3",
   },
-];
+]; */
 
-const BlogsPage = () => {
+const BlogsPage = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "force-cache"
+  });
+  const data = await res.json();
   return (
-    <div>
-      {blogs.map(({ id, year, title }) => (
-        <Link className=" px-2 bg-red-400 mr-5" href={{
-            pathname:`blogs/${id}/${year}`,
-            query: {
-                title: title,
-                year: year
-            }
-        }} key={id} >{title}</Link>
+    <div className="flex flex-col gap-5 my-10 w-[80%] mx-auto">
+      {data.map(({ id, body, title }) => (
+        <div key={id} className="border-sky-400 border">
+          <p>
+            {id}. {body}
+          </p>
+          <Link href={`blogs/${id}`}>
+            <button className="py-1 px-3 bg-sky-500 ">Details</button>
+          </Link>
+        </div>
       ))}
     </div>
   );
