@@ -1,3 +1,4 @@
+import loadBlogsData from "@/utils/loadBlogsData";
 import Link from "next/link";
 
 /* const blogs = [
@@ -19,13 +20,10 @@ import Link from "next/link";
 ]; */
 
 const BlogsPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "force-cache"
-  });
-  const data = await res.json();
+  const blogs = await loadBlogsData();
   return (
     <div className="flex flex-col gap-5 my-10 w-[80%] mx-auto">
-      {data.map(({ id, body, title }) => (
+      {blogs.map(({ id, body, title }) => (
         <div key={id} className="border-sky-400 border">
           <p>
             {id}. {body}
