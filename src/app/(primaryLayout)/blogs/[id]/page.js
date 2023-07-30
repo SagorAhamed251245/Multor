@@ -12,7 +12,6 @@ const SingleBlogs = async ({ params }) => {
     <div>
       <div className="border-sky-400 border w-10/12 mx-auto mt-28">
         <p>
-          {" "}
           {id}.{title}
         </p>
         <p>{body}</p>
