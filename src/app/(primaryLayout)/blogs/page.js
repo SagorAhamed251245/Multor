@@ -19,6 +19,7 @@ import Link from "next/link";
   },
 ]; */
 
+
 const BlogsPage = async () => {
   const blogs = await loadBlogsData();
   return (
@@ -26,7 +27,8 @@ const BlogsPage = async () => {
       {blogs.map(({ id, body, title }) => (
         <div key={id} className="border-sky-400 border">
           <p>
-            {id}. {body}
+            {id}. {body} 
+            
           </p>
           <Link href={`blogs/${id}`}>
             <button className="py-1 px-3 bg-sky-500 ">Details</button>
